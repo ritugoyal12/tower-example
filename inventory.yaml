@@ -3,5 +3,10 @@
   become: yes
   
   tasks:
+    - name: ensure ansible-tower-cli
+      pip:
+        name: ansible-tower-cli
+        state: present
+        
     - name: create_inventories
       shell: "tower-cli inventory create --name='gcptest' --organization='Tower-cli'"
