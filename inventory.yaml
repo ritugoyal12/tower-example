@@ -8,5 +8,17 @@
         name: ansible-tower-cli
         state: present
         
+    - name: configure username
+      shell: "tower-cli config username admin"
+      
+    - name: configure passowrd
+      shell: "tower-cli config password password"
+      
+    - name: configure hostname
+      shell: "tower-cli config host http://54.188.237.77"
+      
+    - name: verify ssl 
+      shell: "tower-cli config verify_ssl False"
+      
     - name: create_inventories
       shell: "tower-cli inventory create --name='gcptest' --organization='Tower-cli'"
