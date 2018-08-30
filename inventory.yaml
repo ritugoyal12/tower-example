@@ -1,0 +1,6 @@
+- name: Package config
+  hosts: localhost
+  become: yes
+  
+- name: create_inventories
+  shell: "tower-cli inventory create --name='gcptest' --organization='Tower-cli'"
