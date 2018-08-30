@@ -21,4 +21,4 @@
       shell: "tower-cli config verify_ssl False"
       
     - name: create_inventories
-      shell: "tower-cli inventory create --name='gcptest' --organization='Tower-cli'"
+      shell: "tower-cli inventory create --name='gcptest' --organization='Test_Org''"
