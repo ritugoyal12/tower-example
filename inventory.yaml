@@ -1,5 +1,5 @@
 - name: Package config
-  hosts: localhost
+  hosts: "{{ ansible_host}}"
   become: yes
   
   tasks:
